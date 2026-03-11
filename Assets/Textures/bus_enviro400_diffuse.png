@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class BusTextureLoader : MonoBehaviour
+{
+    public Renderer busRenderer;
+    public Texture2D busTexture;
+
+    void Start()
+    {
+        // Aplica a textura ao material do ônibus
+        busRenderer.material.mainTexture = busTexture;
+    }
+}
