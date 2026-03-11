@@ -1,0 +1,15 @@
+using UnityEngine;
+
+public class DoorSound : MonoBehaviour
+{
+    public AudioSource audioSource;
+    public AudioClip doorOpenSound;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O)) // tecla O abre a porta
+        {
+            audioSource.PlayOneShot(doorOpenSound);
+        }
+    }
+}
