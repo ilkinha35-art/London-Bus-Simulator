@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class RoadTextureLoader : MonoBehaviour
+{
+    public Renderer roadRenderer;
+    public Texture2D asphaltTexture;
+
+    void Start()
+    {
+        // Aplica textura de asfalto
+        roadRenderer.material.mainTexture = asphaltTexture;
+        roadRenderer.material.mainTextureScale = new Vector2(10, 10); // repete textura
+    }
+}
