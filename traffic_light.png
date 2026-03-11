@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class TrafficLightTextureLoader : MonoBehaviour
+{
+    public Renderer lightRenderer;
+    public Texture2D trafficLightTexture;
+
+    void Start()
+    {
+        // Aplica textura ao semáforo
+        lightRenderer.material.mainTexture = trafficLightTexture;
+    }
+}
