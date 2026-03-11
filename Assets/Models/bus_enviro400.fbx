@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class BusSpawner : MonoBehaviour
+{
+    public GameObject enviro400Prefab;
+    public GameObject routemasterPrefab;
+
+    void Start()
+    {
+        // Instancia o ônibus moderno Enviro400
+        Instantiate(enviro400Prefab, new Vector3(0, 0, 0), Quaternion.identity);
+
+        // Instancia o ônibus clássico Routemaster
+        Instantiate(routemasterPrefab, new Vector3(10, 0, 0), Quaternion.identity);
+    }
+}
