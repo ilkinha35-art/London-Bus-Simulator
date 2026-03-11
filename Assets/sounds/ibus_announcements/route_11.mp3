@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class iBusSystem : MonoBehaviour
+{
+    public AudioSource audioSource;
+    public AudioClip[] announcements;
+    private int currentRoute = 0;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) // tecla espaço toca anúncio
+        {
+            PlayAnnouncement();
+        }
+    }
+
+    void PlayAnnouncement()
+    {
+        if (currentRoute < announcements.Length)
+        {
+            audioSource.clip = announcements[currentRoute];
+            audioSource.Play();
+            currentRoute++;
+        }
+    }
+}
