@@ -1,0 +1,15 @@
+using UnityEngine;
+
+public class BusEngineSound : MonoBehaviour
+{
+    public AudioSource audioSource;
+    public AudioClip engineSound;
+
+    void Start()
+    {
+        // Reproduz som do motor em loop
+        audioSource.clip = engineSound;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+}
